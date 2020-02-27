@@ -1,0 +1,11 @@
+/Users/Guest/Desktop/text-adventure/obj/Debug/netcoreapp2.2/TextAdventure.csprojAssemblyReference.cache
+/Users/Guest/Desktop/text-adventure/obj/Debug/netcoreapp2.2/TextAdventure.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/text-adventure/obj/Debug/netcoreapp2.2/TextAdventure.AssemblyInfoInputs.cache
+/Users/Guest/Desktop/text-adventure/obj/Debug/netcoreapp2.2/TextAdventure.AssemblyInfo.cs
+/Users/Guest/Desktop/text-adventure/bin/Debug/netcoreapp2.2/TextAdventure.deps.json
+/Users/Guest/Desktop/text-adventure/bin/Debug/netcoreapp2.2/TextAdventure.runtimeconfig.json
+/Users/Guest/Desktop/text-adventure/bin/Debug/netcoreapp2.2/TextAdventure.runtimeconfig.dev.json
+/Users/Guest/Desktop/text-adventure/bin/Debug/netcoreapp2.2/TextAdventure.dll
+/Users/Guest/Desktop/text-adventure/bin/Debug/netcoreapp2.2/TextAdventure.pdb
+/Users/Guest/Desktop/text-adventure/obj/Debug/netcoreapp2.2/TextAdventure.dll
+/Users/Guest/Desktop/text-adventure/obj/Debug/netcoreapp2.2/TextAdventure.pdb

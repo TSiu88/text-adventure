@@ -24,3 +24,12 @@ Puzzles:
 - Use the correct item on the correct puzzle, e.g. give something/someone an item
 - Jumbled letters, figure out what the actual word is
 - Solve riddles
+
+How Player Takes Damage:
+- From failing to open doors
+- From items/NPCs
+
+Difficulty:
+- Player's starting HP differs
+- Easy: Tutorial NPC will give more/better items
+- Hard: Tutorial NPC will not give item at all
