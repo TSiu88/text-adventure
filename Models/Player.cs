@@ -13,7 +13,7 @@ namespace Adventure.Models
     {
       Name = name;
       HP = 10;
-      List<string> Inventory = new List<string> ();
+      Inventory = new List<string> ();
     }
   }
 }
