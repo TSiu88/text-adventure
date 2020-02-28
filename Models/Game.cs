@@ -30,24 +30,42 @@ namespace Adventure.Models
       Door7Locked = true;
     }
 
+    public void ShowStats()
+    {
+      Console.WriteLine("============================");
+      Console.WriteLine("Name: " + Adventurer.Name);
+      Console.WriteLine("HP: " + Adventurer.HP);
+      if (Adventurer.Inventory.Count > 0)
+      {
+        Console.WriteLine("Inventory: " + string.Join(" ", Adventurer.Inventory));
+      }
+      else
+      {
+        Console.WriteLine("Inventory: EMPTY");
+      }
+      Console.WriteLine("============================");
+    }
+
     public void RoomDescription(int roomNumber)
     {
       switch(roomNumber)
       {
         case 1:
-          Console.WriteLine("The room is full of JUNK with banana peels littering the floor.  You see a DOOR that is locked and a friendly looking MONKEY standing in the corner.  Now how to get through that DOOR...");
+          Console.WriteLine("The ROOM is full of JUNK with banana peels littering the floor.  You see a DOOR that is locked and a friendly looking MONKEY standing in the corner.  Now how to get through that DOOR...");
           break;
       }
     }
 
     public void RoomOne(string[] commands)
     {
+      Console.WriteLine("****************************");
       if (commands.Length < 2)
       {
         Console.WriteLine("Invalid command. Please try again.");
       }
       else
       {
+        // Command switch start
         switch(commands[0])
         {
           case "MOVE":
@@ -68,15 +86,15 @@ namespace Adventure.Models
                 Console.WriteLine("You try to move but you can't figure out how.");
                 break;
             }
-            break;
+            break; // MOVE case ends
           case "LOOK":
             switch(commands[1])
             {
               case "ROOM":
-                Console.WriteLine("You search the room.  The piles of JUNK and bananas scattered about make it difficult to traverse.  The MONKEY stares at you from his spot in the corner.");
+                Console.WriteLine("You search the ROOM.  The piles of JUNK and bananas scattered about make it difficult to traverse.  The MONKEY stares at you from his spot in the corner.");
                 break;
               case "JUNK":
-                Console.WriteLine("You shift through one of the piles of junk on the floor and notice a large KEY beneath one of them.");
+                Console.WriteLine("You shift through one of the piles of JUNK on the floor and notice a large KEY beneath one of them.");
                 break;
               case "MONKEY":
                 Console.WriteLine("For being a different species he looks remarkably intelligent. Maybe you can TALK to him?");
@@ -88,18 +106,103 @@ namespace Adventure.Models
                 Console.WriteLine("You look at the air.  The air stares back...?");
                 break;
             }
-            break;
+            break; // LOOK case ends
           case "PICKUP":
-
-          break;
+            switch(commands[1])
+            {
+              case "KEY":
+                Console.WriteLine("You pick up the large KEY from the pile of JUNK.  It is surprisingly heavy for its size.");
+                Adventurer.Inventory.Add("HEAVY-KEY");
+                break;
+              case "JUNK":
+                Console.WriteLine("You try to pick up some JUNK but it all looks useless. It'll just take up space in your pocket I guess.");
+                Adventurer.Inventory.Add("JUNK");
+                break;
+              default:
+                Console.WriteLine("You try to pick up the air.  It wasn't interested.");
+                break;
+            } 
+            break; // PICKUP case ends
           case "TALK":
-
-          break;
+            switch(commands[1])
+            {
+              case "MONKEY":
+                Console.WriteLine("'Good day!' says the MONKEY.  'Do you need some HELP?'");
+                Console.WriteLine("How will you reply? (HELP/BYE/INFO)");
+                string reply = Console.ReadLine().ToUpper();
+                switch(reply)
+                {
+                  case "HELP":
+                    Console.WriteLine("'You can LOOK ROOM to look around and you can even combine COMMAND KEYWORD and see what happens!'");
+                    Console.WriteLine("'USE (ITEM-NAME) (OBJECT) to use items from your inventory on an object!'");
+                    break;
+                  case "BYE":
+                    Console.WriteLine("'OK. Bye.'");
+                    break;
+                  case "INFO":
+                    Console.WriteLine("'Well I've been stuck in this ROOM just like you.  Don't know why, but there's plenty of bananas so I'm fine here.'");
+                    break;
+                  default:
+                    Console.WriteLine("'Sorry I don't understand what you're saying.'");
+                    break;
+                }
+                break;
+              default:
+                Console.WriteLine("You talk to yourself.  You wonder what you're doing.");
+                break;
+            } 
+            break; // TALK case ends
           case "USE":
-
-          break;
-        }
-      }
+            string item = commands[1];
+            if (commands.Length < 3)
+            {
+              Console.WriteLine("Nothing to use item on! Please try again with USE (ITEM) (TARGET-OBJECT).");
+            }
+            else
+            {
+              string target = commands[2];
+              switch(item)
+              {
+                case "HEAVY-KEY":
+                  switch(target)
+                  {
+                    case "DOOR":
+                      Console.WriteLine("You insert the KEY into the DOOR and it swings open easily.  You can now MOVE through the DOOR.");
+                      Door1Locked = false;
+                      Adventurer.Inventory.Remove("HEAVY-KEY");
+                      break;
+                    case "JUNK":
+                      Console.WriteLine("You try to use the KEY on the JUNK.  It's useless and nothing happens.");
+                      break;
+                    default:
+                      Console.WriteLine("You try to use the KEY to unlock an invisible air portal.  It doesn't work since those don't exist.");
+                      break;
+                  }
+                  break;
+                case "JUNK":
+                  switch(target)
+                  {
+                    case "HEAVY-KEY":
+                      Console.WriteLine("You bang the JUNK against the KEY in hopes that it will open something.  It doesn't.");
+                      break;
+                    default:
+                      Console.WriteLine("You try to use the JUNK but it's still useless.");
+                      break;
+                  }
+                  break;
+                default:
+                  Console.WriteLine("You try to use an item that you can't find.  It doesn't just exist.");
+                  break;
+              } // ITEM switch ends
+            } // else ends
+              break;
+            default:
+              Console.WriteLine("Invalid command.  Please try again.");
+              break; // USE case ends
+            
+        } // Command[0] switch ends
+      } // Room One ends
+      Console.WriteLine("****************************");
     }
 
   }

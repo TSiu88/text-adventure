@@ -9,6 +9,7 @@ namespace Adventure
   {
     public static Game game;
     public static Player player;
+    public static bool gameOver = false;
 
     static void Main()
     {
@@ -20,44 +21,35 @@ namespace Adventure
       char difficulty = Convert.ToChar(Console.ReadLine());
       game = new Game(name, difficulty);
 
-      ShowStats();
       Console.WriteLine("You wake up and find yourself in a strange room.  How did you get here?  Well however that happened, you feel like you have to get out.");
 
-      Console.WriteLine("What do you want to do next? (MOVE/LOOK/PICKUP/TALK/USE)");
-      string commandString = Console.ReadLine().ToUpper();
-      string[] commands = commandString.Split(" ");
-
-      switch(game.CurrentRoom) 
+      while(!gameOver)
       {
-        case 1:
-          //Call first room method
-          game.RoomDescription(1);
-          game.RoomOne(commands);
-          break;
-        case 2:
-          //Call second room method
-          break;
-        default:
-          Console.WriteLine("Error, room not found");
-          break;
+        game.ShowStats();
+        switch(game.CurrentRoom) 
+        {
+          case 1:
+            //Call first room method
+            game.RoomDescription(1);
+            game.RoomOne(AskCommands());
+            break;
+          case 2:
+            //Call second room method
+            gameOver = true;
+            break;
+          default:
+            Console.WriteLine("Error, room not found");
+            break;
+        }
       }
-
     }
 
-    public static void ShowStats()
+    public static string[] AskCommands()
     {
-      Console.WriteLine("============================");
-      Console.WriteLine("Name: " + game.Adventurer.Name);
-      Console.WriteLine("HP: " + game.Adventurer.HP);
-      if (game.Adventurer.Inventory.Count > 0)
-      {
-        Console.WriteLine("Inventory: " + string.Join(" ", game.Adventurer.Inventory));
-      }
-      else
-      {
-        Console.WriteLine("Inventory: EMPTY");
-      }
-      Console.WriteLine("============================");
+      Console.WriteLine(">>> What do you want to do next? (MOVE/LOOK/PICKUP/TALK/USE)");
+      string commandString = Console.ReadLine().ToUpper();
+      string[] commands = commandString.Split(" ");
+      return commands;
     }
   }
 }
