@@ -19,14 +19,15 @@ namespace Adventure
       string name = Console.ReadLine();
       Console.WriteLine("Enter difficulty: ('E' for easy/'H' for hard)");
       char difficulty = Convert.ToChar(Console.ReadLine());
+      Player.Name = name;
       game = new Game(name, difficulty);
 
       Console.WriteLine("You wake up and find yourself in a strange room.  How did you get here?  Well however that happened, you feel like you have to get out.");
 
       while(!gameOver)
       {
-        game.ShowStats();
-        switch(game.CurrentRoom) 
+        Game.ShowStats();
+        switch(Game.CurrentRoom) 
         {
           case 1:
             //Call first room method
