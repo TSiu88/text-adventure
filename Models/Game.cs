@@ -60,6 +60,9 @@ namespace Adventure.Models
         case "2A":
           Console.WriteLine("The ROOM is surprisingly cleaner with a barred GATEWAY to the South with a neat line of BUTTONS on its front.  There also appears to be a small TUNNEL in the corner of the room that is just big enough to crawl through.");
           break;
+        case "3":
+          Console.WriteLine("You see a CAT standing in front of a WINDOW. It's fixated its gaze on something behind the WINDOW. But wow, there is also an ELEVATOR in this ROOM. Looks like there is only one way to go -- up!");
+          break;
         default:
           Console.WriteLine("Room number not found!");
           break;
@@ -75,6 +78,9 @@ namespace Adventure.Models
         case "2A":
           Room2A.RoomTwoACommands(inputCommand);
           break;
+        case "3":
+          Room3.RoomThreeCommands(inputCommand);
+          break;
         default:
           break;
       }  
@@ -87,6 +93,8 @@ namespace Adventure.Models
       {
         case "1":
           return Room1.Door1Locked;
+        case "3":
+          return Room3.Door3Locked;
         default:
           return true; 
       }
@@ -98,6 +106,9 @@ namespace Adventure.Models
       {
         case "1":
           Room1.Door1Locked = false;
+          break;
+        case "3":
+          Room3.Door3Locked = true;
           break;
         default:
           break;
