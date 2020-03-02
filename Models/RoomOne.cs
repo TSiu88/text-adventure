@@ -55,7 +55,7 @@ namespace Adventure.Models
           if (!Door1Locked)
           {
             Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
-            Game.CurrentRoom = 2;
+            Game.CurrentRoom = "2a";
           }
           else
           {
@@ -121,6 +121,7 @@ namespace Adventure.Models
             case "HELP":
               Console.WriteLine("'You can LOOK ROOM to look around and you can even combine COMMAND KEYWORD and see what happens!'");
               Console.WriteLine("'USE (ITEM-NAME) (OBJECT) to use items from your inventory on an object!'");
+              Console.WriteLine("Talk to me again if you need anything else!");
               break;
             case "BYE":
               Console.WriteLine("'OK. Bye.'");

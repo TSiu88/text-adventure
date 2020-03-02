@@ -60,9 +60,6 @@ namespace Adventure.Models
             break;
         } // ITEM switch ends
       } // else ends
-        
-      
-        
     }
   }
 }

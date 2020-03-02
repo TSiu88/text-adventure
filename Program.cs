@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using Adventure.Models;
 
 namespace Adventure
@@ -27,21 +25,8 @@ namespace Adventure
       while(!gameOver)
       {
         Game.ShowStats();
-        switch(Game.CurrentRoom) 
-        {
-          case 1:
-            //Call first room method
-            game.RoomDescription(1);
-            game.CallRoomCommands(AskCommands());
-            break;
-          case 2:
-            //Call second room method
-            gameOver = true;
-            break;
-          default:
-            Console.WriteLine("Error, room not found");
-            break;
-        }
+        game.RoomDescription();
+        game.CallRoomCommands(AskCommands());
       }
     }
 

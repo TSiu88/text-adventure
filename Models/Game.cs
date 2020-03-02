@@ -7,7 +7,7 @@ namespace Adventure.Models
   {
     //public static Player Adventurer { get; set; }
     public char Difficulty { get; set; }
-    public static int CurrentRoom { get; set; }
+    public static string CurrentRoom { get; set; }
     public static RoomOne Room1 { get; set; }
     
     public bool Door2Locked { get; set; }
@@ -21,7 +21,7 @@ namespace Adventure.Models
     {
       //Adventurer = new Player(name);
       Difficulty = difficultyLevel;
-      CurrentRoom = 1;
+      CurrentRoom = "1";
       Room1 = new RoomOne();
       Door2Locked = true;
       Door3Locked = true;
@@ -47,12 +47,15 @@ namespace Adventure.Models
       Console.WriteLine("============================");
     }
 
-    public void RoomDescription(int roomNumber)
+    public void RoomDescription()
     {
-      switch(roomNumber)
+      switch(CurrentRoom)
       {
-        case 1:
+        case "1":
           Console.WriteLine("The ROOM is full of JUNK with banana peels littering the floor.  You see a DOOR that is locked and a friendly looking MONKEY standing in the corner.  Now how to get through that DOOR...");
+          break;
+        case "2a":
+          Console.WriteLine("The ROOM is surprisingly cleaner with a barred GATEWAY to the South with a neat line of BUTTONS on its front.  There also appears to be a small TUNNEL in the corner of the room that is just big enough to crawl through.");
           break;
         default:
           Console.WriteLine("Room number not found!");
@@ -63,7 +66,7 @@ namespace Adventure.Models
     {
       switch(CurrentRoom)
       {
-        case 1:
+        case "1":
           Room1.RoomOneCommands(inputCommand);
           break;
         default:
@@ -76,7 +79,7 @@ namespace Adventure.Models
     {
       switch(CurrentRoom)
       {
-        case 1:
+        case "1":
           return Room1.Door1Locked;
         default:
           return true; 
@@ -87,7 +90,7 @@ namespace Adventure.Models
     {
       switch(CurrentRoom)
       {
-        case 1:
+        case "1":
           Room1.Door1Locked = false;
           break;
         default:
