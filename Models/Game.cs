@@ -87,6 +87,8 @@ namespace Adventure.Models
       {
         case "1":
           return Room1.Door1Locked;
+        case "2A":
+          return Room2A.Door2Locked;
         default:
           return true; 
       }
@@ -98,6 +100,9 @@ namespace Adventure.Models
       {
         case "1":
           Room1.Door1Locked = false;
+          break;
+        case "2A":
+          Room2A.Door2Locked = false;
           break;
         default:
           break;

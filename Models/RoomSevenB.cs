@@ -62,7 +62,7 @@ namespace Adventure.Models
           }
           break;
         default:
-          Console.WriteLine("You try to move but you can't figure out how.");
+          Console.WriteLine("You try to move it but you can't figure out how.");
           break;
       }
     } // RoomSevenBMoveCase ends
@@ -74,6 +74,7 @@ namespace Adventure.Models
         case "ITEM":
           break;
         default:
+          Console.WriteLine("You look at the air.  The air stares back...?");
           break;
       }
     } // RoomSevenBLookCase ends
@@ -85,6 +86,7 @@ namespace Adventure.Models
         case "ITEM":
           break;
         default:
+          Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
       }
     }
@@ -95,6 +97,7 @@ namespace Adventure.Models
         case "PERSON":
           break;
         default:
+          Console.WriteLine("You talk to yourself.  You wonder what you're doing.");
           break;
       }
     } // RoomSevenBTalkCase ends

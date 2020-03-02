@@ -59,11 +59,11 @@ namespace Adventure.Models
           }
           else
           {
-            Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
+            Console.WriteLine("This DOOR is locked up tight.  You can't open it without a KEY.");
           }
           break;
         default:
-          Console.WriteLine("You try to move but you can't figure out how.");
+          Console.WriteLine("You try to move it but you can't figure out how.");
           break;
       }
     } // RoomOneMoveCase ends
