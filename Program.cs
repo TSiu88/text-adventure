@@ -31,7 +31,7 @@ namespace Adventure
           case 1:
             //Call first room method
             game.RoomDescription(1);
-            game.RoomOne(AskCommands());
+            game.CallRoomCommands(AskCommands());
             break;
           case 2:
             //Call second room method
