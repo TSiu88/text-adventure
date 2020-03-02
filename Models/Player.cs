@@ -55,6 +55,17 @@ namespace Adventure.Models
                 break;
             }
             break;
+          case "ROCK":
+            switch(target)
+            {
+              case "WINDOW":
+                Console.WriteLine("You throw the ROCK at the WINDOW. It was a nice, clean shot! All the glass shattered and made space big enough for you to go through.");
+                break;
+              default:
+                Console.WriteLine("You throw the ROCK up in the air and catch it again. Seems like gravity works fine here.");
+                break;
+            }
+            break;
           default:
             Console.WriteLine("You try to use an item that you can't find.  It doesn't just exist.");
             break;
