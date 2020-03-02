@@ -60,6 +60,9 @@ namespace Adventure.Models
         case "2A":
           Console.WriteLine("The ROOM is surprisingly cleaner with a barred GATEWAY to the South with a neat line of BUTTONS on its front.  There also appears to be a small TUNNEL in the corner of the room that is just big enough to crawl through.");
           break;
+        case "2B":
+          Console.WriteLine("The ROOM is small and cramped with barely enough light to see.  A glimmer of something shiny catches your eye on the opposite wall.  It looks like a MIRROR.");
+          break;
         default:
           Console.WriteLine("Room number not found!");
           break;
@@ -74,6 +77,9 @@ namespace Adventure.Models
           break;
         case "2A":
           Room2A.RoomTwoACommands(inputCommand);
+          break;
+        case "2B":
+          Room2B.RoomTwoBCommands(inputCommand);
           break;
         default:
           break;

@@ -49,10 +49,17 @@ namespace Adventure.Models
     {
       switch(location)
       {
-        case "LOCATION":
+        case "TUNNEL":
+          Console.WriteLine("You move back into the TUNNEL, leaving the lone MIRROR behind.");
+          break;
+        case "MIRROR":
+          Console.WriteLine("You try to lift the MIRROR off the wall but it is too heavy and stuck in place.");
+          break;
+        case "SPOON":
+          Console.WriteLine("You try to bend the SPOON with your mind, but all you get is a slight headache for your trouble.");
           break;
         default:
-          Console.WriteLine("You try to move but you can't figure out how.");
+          Console.WriteLine("You try to move it but you can't figure out how.");
           break;
       }
     } // RoomTwoBMoveCase ends
@@ -61,9 +68,17 @@ namespace Adventure.Models
     {
       switch(item)
       {
-        case "ITEM":
+        case "ROOM":
+          Console.WriteLine("The ROOM is dark and dusty with a large MIRROR covering the far wall.  Looking down you can see a SPOON sticking out of the dirt of the TUNNEL.");
+          break;
+        case "MIRROR":
+          Console.WriteLine("You look into the large dusty MIRROR that takes up most of the wall and can make out the outline of your reflection.  How did it get in this dark cramped place?");
+          break;
+        case "SPOON":
+          Console.WriteLine("A rusty old SPOON sticks out of the dirt and the entrance to the TUNNEL.  I guess people really dig TUNNELs with SPOONs?");
           break;
         default:
+          Console.WriteLine("You look at the air.  The air stares back...?");
           break;
       }
     } // RoomTwoBLookCase ends
@@ -72,9 +87,10 @@ namespace Adventure.Models
     {
       switch(item)
       {
-        case "ITEM":
+        case "SPOON":
           break;
         default:
+          Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
       }
     }
@@ -85,6 +101,7 @@ namespace Adventure.Models
         case "PERSON":
           break;
         default:
+          Console.WriteLine("You talk to yourself.  You wonder what you're doing.");
           break;
       }
     } // RoomTwoBTalkCase ends
