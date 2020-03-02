@@ -55,7 +55,7 @@ namespace Adventure.Models
           if (!Door1Locked)
           {
             Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
-            Game.CurrentRoom = "2a";
+            Game.CurrentRoom = "2A";
           }
           else
           {
