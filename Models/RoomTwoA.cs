@@ -65,6 +65,10 @@ namespace Adventure.Models
           Console.WriteLine("You get down on your stomach and start to crawl through the narrow opening of the TUNNEL.  It's a tight fit, but you manage to squeeze through.");
           Game.CurrentRoom = "2B";
           break;
+        case "DOOR":
+          Console.WriteLine("You move back through the DOOR to the ROOM you woke up in. At least the MONKEY is friendly and will probably share the bananas.");
+          Game.CurrentRoom = "1";
+          break;
         default:
           Console.WriteLine("You try to move it but you can't figure out how.");
           break;
@@ -91,10 +95,10 @@ namespace Adventure.Models
           Console.WriteLine("You try to figure out what kind of animal this DOORMAT is trying to depict.  At one angle it looks like a bird, but at another angle it looks like a fish.");
           break;
         case "PANEL":
-          Console.WriteLine("You search the ROOM for the secret PANEL you heard should be here.  You finally find it blending into the wall next to the GATEWAY.  It looks like you can try to pry it open or pick it up.");
+          Console.WriteLine("You search the ROOM for the secret PANEL you heard should be here.  You finally find it blending into the wall next to the GATEWAY.  It looks like you can try to pry it open or try to PICKUP.");
           break;
         case "INDENT":
-          Console.WriteLine("If this is a button, it is the most un-button-like button you've ever seen.");
+          Console.WriteLine("If this is a button, it is the most un-button-like button you've ever seen.  But maybe you can try to poke at it with a PICKUP?");
           break;
         default:
           Console.WriteLine("You look at the air.  The air stares back...?");
