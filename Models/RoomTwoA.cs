@@ -53,7 +53,7 @@ namespace Adventure.Models
         case "GATEWAY":
           if (!Door2Locked)
           {
-            Console.WriteLine("To your surprise, the barred GATEWAY slides down smoothly into the floor and you walk through.");
+            Console.WriteLine("To your surprise, the barred GATEWAY slides down smoothly into the floor as you approach and you walk through.");
             Game.CurrentRoom = "3";
           }
           else
@@ -90,6 +90,12 @@ namespace Adventure.Models
         case "DOORMAT":
           Console.WriteLine("You try to figure out what kind of animal this DOORMAT is trying to depict.  At one angle it looks like a bird, but at another angle it looks like a fish.");
           break;
+        case "PANEL":
+          Console.WriteLine("You search the ROOM for the secret PANEL you heard should be here.  You finally find it blending into the wall next to the GATEWAY.  It looks like you can try to pry it open or pick it up.");
+          break;
+        case "INDENT":
+          Console.WriteLine("If this is a button, it is the most un-button-like button you've ever seen.");
+          break;
         default:
           Console.WriteLine("You look at the air.  The air stares back...?");
           break;
@@ -105,6 +111,13 @@ namespace Adventure.Models
           break;
         case "DOORMAT":
           Console.WriteLine("You lift the DOORMAT hoping for a clue on what button to press, but there is nothing there but the name 'Herring'.");
+          break;
+        case "PANEL":
+          Console.WriteLine("You pry open the PANEL to reveal a small INDENT underneath it.");
+          break;
+        case "INDENT":
+          Console.WriteLine("You push on the INDENT and hear a small click from a hidden mechanism underneath it.");
+          Door2Locked = false;
           break;
         default:
           Console.WriteLine("You try to pick up the air.  It wasn't interested.");
