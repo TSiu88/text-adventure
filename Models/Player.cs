@@ -67,6 +67,18 @@ namespace Adventure.Models
                 break;
             }
             break;
+          case "SARDINES":
+            switch(target)
+            {
+              case "CAT":
+                Console.WriteLine("You open the can of SARDINES for the CAT. That got the CAT super excited. It's so happy that it wants to give you something back."); // cat returns something?
+                Game.UnlockDoor();
+                break;
+              default:
+                Console.WriteLine("You fail to use the can of SARDINES.");
+                break;
+            }
+            break;
           case "ACCESS-CARD":
             switch(target)
             {
@@ -75,7 +87,7 @@ namespace Adventure.Models
                 Game.UnlockDoor();
                 break;
               default:
-                Console.WriteLine("");
+                Console.WriteLine("You tap your ACCESS-CARD randomly onto the walls. Nothing happens.");
                 break;
             }
             break;
