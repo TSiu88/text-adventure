@@ -66,7 +66,7 @@ namespace Adventure.Models
       switch(item)
       {
         case "ROOM":
-          Console.WriteLine("This is a very small ROOM, almost like storage space without any doors. Hmm, weird. There's just a can of SARDINES that you saw earlier. You look around the room and see an ACCESS-CARD hanging on the wall behind you.");
+          Console.WriteLine("You look around the room and see an ACCESS-CARD hanging on the wall behind you.");
           break;
         default:
           Console.WriteLine("You look at the air.  The air stares back...?");

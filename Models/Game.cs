@@ -66,6 +66,9 @@ namespace Adventure.Models
         case "3":
           Console.WriteLine("You see a CAT standing in front of a WINDOW. It's fixated its gaze on something behind the WINDOW. But wow, there is also an ELEVATOR in this ROOM. Looks like there is only one way to go -- up!");
           break;
+        case "4":
+          Console.WriteLine("This is a very small ROOM, almost like storage space without any doors. Hmm, weird. There's a can of SARDINES that you saw earlier.");
+          break;
         default:
           Console.WriteLine("Room number not found!");
           break;
@@ -86,6 +89,9 @@ namespace Adventure.Models
           break;
         case "3":
           Room3.RoomThreeCommands(inputCommand);
+          break;
+        case "4":
+          Room4.RoomFourCommands(inputCommand);
           break;
         default:
           break;
