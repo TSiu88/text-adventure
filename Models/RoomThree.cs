@@ -5,11 +5,9 @@ namespace Adventure.Models
   public class RoomThree
   {
     public bool Door3Locked { get; set; }
-    public bool Door4Locked { get; set; }
     public RoomThree()
     {
       Door3Locked = true;
-      Door4Locked = true;
     }
 
     public void RoomThreeCommands(string[] commands)
@@ -64,7 +62,7 @@ namespace Adventure.Models
           }
           break;
         case "WINDOW":
-          if (!Door4Locked)
+          if (!RoomFour.Door4Locked)
           {
             Console.WriteLine("You climb up and go through the broken WINDOW.");
             Game.CurrentRoom = "4";

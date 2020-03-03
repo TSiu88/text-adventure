@@ -103,6 +103,8 @@ namespace Adventure.Models
           return Room2A.Door2Locked;
         case "3":
           return Room3.Door3Locked;
+        case "4":
+          return RoomFour.Door4Locked;
         default:
           return true; 
       }
@@ -120,6 +122,9 @@ namespace Adventure.Models
           break;
         case "3":
           Room3.Door3Locked = false;
+          break;
+        case "4":
+          RoomFour.Door4Locked = false;
           break;
         default:
           break;

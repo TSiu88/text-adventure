@@ -4,6 +4,12 @@ namespace Adventure.Models
 {
   public class RoomFour
   {
+    public static bool Door4Locked { get; set; }
+
+    public RoomFour()
+    {
+      Door4Locked = true;
+    }
 
     public void RoomFourCommands(string[] commands)
     {
@@ -76,6 +82,10 @@ namespace Adventure.Models
           Console.WriteLine("You pick up a can of SARDINES");
           Player.Inventory.Add("SARDINES");
           break;
+        case "ACCESS-CARD":
+          Console.WriteLine("You take the ACCESS-CARD. It is plain white which reminds you of your school's security access card that you can tap on any BADGE-READER in your school building.");
+          Player.Inventory.Add("ACCESS-CARD");
+          break;
         default:
           Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
@@ -87,7 +97,7 @@ namespace Adventure.Models
       {
         case "CAT":
           Console.WriteLine("'MEOWWWWWWWWW'");
-          Console.WriteLine("Sounds like it's very excited.");
+          Console.WriteLine("Sounds like it's very excited. The CAT is standing next the WINDOW.");
           break;
         default:
           Console.WriteLine("You talk to yourself.  You wonder what you're doing.");

@@ -60,10 +60,22 @@ namespace Adventure.Models
             {
               case "WINDOW":
                 Console.WriteLine("You throw the ROCK at the WINDOW. It was a nice, clean shot! All the glass shattered and made space big enough for you to go through.");
-                Game.UnlockDoor();
+                RoomFour.Door4Locked = false;
                 break;
               default:
                 Console.WriteLine("You throw the ROCK up in the air and catch it again. Seems like gravity works fine here.");
+                break;
+            }
+            break;
+          case "ACCESS-CARD":
+            switch(target)
+            {
+              case "BADGE-READER":
+                Console.WriteLine("You tap your ACCESS-CARD onto the BADGE-READER. The elevator lights up and opens its doors for you.");
+                Game.UnlockDoor();
+                break;
+              default:
+                Console.WriteLine("");
                 break;
             }
             break;
