@@ -42,7 +42,7 @@ namespace Adventure.Models
             break;
             
         } // Command[0] switch ends
-      } // Room SevenB ends
+      } // Room Six ends
       Console.WriteLine("****************************");
     }
 
@@ -54,12 +54,15 @@ namespace Adventure.Models
           if (!Door6Locked)
           {
             Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
-            Game.CurrentRoom = "2A";
+            Game.CurrentRoom = "7A";
           }
           else
           {
             Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
           }
+          break;
+        case "BACK":
+          Game.CurrentRoom = "6";
           break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");

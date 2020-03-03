@@ -61,6 +61,9 @@ namespace Adventure.Models
             Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
           }
           break;
+        case "BACK":
+          Game.CurrentRoom = "3";
+          break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");
           break;
