@@ -119,7 +119,7 @@ namespace Adventure.Models
           Room2A.Door2Locked = false;
           break;
         case "3":
-          Room3.Door3Locked = true;
+          Room3.Door3Locked = false;
           break;
         default:
           break;
