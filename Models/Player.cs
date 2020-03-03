@@ -60,6 +60,7 @@ namespace Adventure.Models
             {
               case "WINDOW":
                 Console.WriteLine("You throw the ROCK at the WINDOW. It was a nice, clean shot! All the glass shattered and made space big enough for you to go through.");
+                Game.UnlockDoor();
                 break;
               default:
                 Console.WriteLine("You throw the ROCK up in the air and catch it again. Seems like gravity works fine here.");

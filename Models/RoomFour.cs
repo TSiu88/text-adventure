@@ -4,11 +4,6 @@ namespace Adventure.Models
 {
   public class RoomFour
   {
-    public bool Door4Locked { get; set; }
-    public RoomFour()
-    {
-      Door4Locked = true;
-    }
 
     public void RoomFourCommands(string[] commands)
     {
@@ -50,16 +45,9 @@ namespace Adventure.Models
     {
       switch(location)
       {
-        case "LOCATION":
-          if (!Door4Locked)
-          {
-            Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
-            Game.CurrentRoom = "2A";
-          }
-          else
-          {
-            Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
-          }
+        case "WINDOW":
+          Console.WriteLine("You go through the broken WINDOW.");
+          Game.CurrentRoom = "3";
           break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");
@@ -71,9 +59,11 @@ namespace Adventure.Models
     {
       switch(item)
       {
-        case "ITEM":
+        case "ROOM":
+          Console.WriteLine("This is a very small ROOM, almost like storage space without any doors. Hmm, weird. There's just a can of SARDINES that you saw earlier. You look around the room and see an ACCESS-CARD hanging on the wall behind you.");
           break;
         default:
+          Console.WriteLine("You look at the air.  The air stares back...?");
           break;
       }
     } // RoomFourLookCase ends
@@ -82,9 +72,12 @@ namespace Adventure.Models
     {
       switch(item)
       {
-        case "ITEM":
+        case "SARDINES":
+          Console.WriteLine("You pick up a can of SARDINES");
+          Player.Inventory.Add("SARDINES");
           break;
         default:
+          Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
       }
     }
@@ -92,9 +85,12 @@ namespace Adventure.Models
     {
       switch(person)
       {
-        case "PERSON":
+        case "CAT":
+          Console.WriteLine("'MEOWWWWWWWWW'");
+          Console.WriteLine("Sounds like it's very excited.");
           break;
         default:
+          Console.WriteLine("You talk to yourself.  You wonder what you're doing.");
           break;
       }
     } // RoomFourTalkCase ends

@@ -88,6 +88,7 @@ namespace Adventure.Models
           Console.WriteLine("There are ROCKs on the ground. The ELEVATOR doors are silvery, modern-looking with a BADGE-READER on the side. Meanwhile, the CAT is just standing there, purring and grooming itself. You notice it's wearing a COLLAR. It must have an owner. How did the CAT get lost here?");
           break;
         default:
+          Console.WriteLine("You look at the air.  The air stares back...?");
           break;
       }
     } // RoomThreeLookCase ends
@@ -100,11 +101,8 @@ namespace Adventure.Models
           Console.WriteLine("You pick up a medium-sized ROCK.");
           Player.Inventory.Add("ROCK");
           break;
-        case "COLLAR":
-          Console.WriteLine("You take a closer look at the CAT's COLLAR. Beside its nametag, there is a small ACCESS-CARD attached to the COLLAR. You take the ACCESS-CARD with you.");
-          Player.Inventory.Add("ACCESS-CARD");
-          break;
         default:
+          Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
       }
     }
@@ -113,9 +111,24 @@ namespace Adventure.Models
       switch(person)
       {
         case "CAT":
-          Console.WriteLine("'Meow...' says the CAT. It looks like it wants you to do something for it.");
+          Console.WriteLine("'Meow...' says the CAT. ");
+          Console.WriteLine("How will you reply? (PET/BYE)");
+          string reply = Console.ReadLine().ToUpper();
+          switch(reply)
+          {
+            case "PET":
+              Console.WriteLine("*purr* *purr* It seems that the CAT likes you. As you pet the CAT, you take a closer look at what its gaze is fixated on. There is a can of SARDINES lying behind the clear glass WINDOW. Looks like the CAT wants you to get it.'");
+              break;
+            case "BYE":
+              Console.WriteLine("The CAT goes back minding its own business.");
+              break;
+            default:
+              Console.WriteLine("'Meow?' The CAT looks confused.");
+              break;
+          }
           break;
         default:
+          Console.WriteLine("You talk to yourself.  You wonder what you're doing.");
           break;
       }
     } // RoomThreeTalkCase ends
