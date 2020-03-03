@@ -51,6 +51,7 @@ namespace Adventure.Models
       {
         case "TUNNEL":
           Console.WriteLine("You move back into the TUNNEL, leaving the lone MIRROR behind.");
+          Game.CurrentRoom = "2A";
           break;
         case "MIRROR":
           Console.WriteLine("You try to lift the MIRROR off the wall but it is too heavy and stuck in place.");
