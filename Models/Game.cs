@@ -64,16 +64,29 @@ namespace Adventure.Models
           Console.WriteLine("The ROOM is small and cramped with barely enough light to see.  A glimmer of something shiny catches your eye on the opposite wall.  It looks like a MIRROR.");
           break;
         case "3":
-          Console.WriteLine("You see a CAT standing in front of a WINDOW. It's fixated its gaze on something behind the WINDOW. But wow, there is also an ELEVATOR in this ROOM. Looks like there is only one way to go -- up!");
+          Console.WriteLine("You see a CAT standing in front of a WINDOW. It's fixated its gaze on something behind the WINDOW. But what on earth--there is also an ELEVATOR in this ROOM. Looks like there is only one way to go--up!");
           break;
         case "4":
           Console.WriteLine("This is a very small ROOM, almost like storage space without any doors. Hmm, weird. There's a can of SARDINES that you saw earlier.");
+          break;
+        case "5":
+          Console.WriteLine("Room5");
+          break;
+        case "6":
+          Console.WriteLine("Room6");
+          break;
+        case "7A":
+          Console.WriteLine("Room7A");
+          break;
+        case "7B":
+          Console.WriteLine("Room7B");
           break;
         default:
           Console.WriteLine("Room number not found!");
           break;
       }
     }
+
     public void CallRoomCommands(string[] inputCommand)
     {
       switch(CurrentRoom)
@@ -93,6 +106,18 @@ namespace Adventure.Models
         case "4":
           Room4.RoomFourCommands(inputCommand);
           break;
+        case "5":
+          Room5.RoomFiveCommands(inputCommand);
+          break;
+        case "6":
+          Room6.RoomSixCommands(inputCommand);
+          break;
+        case "7A":
+          Room7A.RoomSevenACommands(inputCommand);
+          break;
+        case "7B":
+          Room7B.RoomSevenBCommands(inputCommand);
+          break;
         default:
           break;
       }  
@@ -111,6 +136,12 @@ namespace Adventure.Models
           return Room3.Door3Locked;
         case "4":
           return RoomFour.Door4Locked;
+        case "5":
+          return Room5.Door5Locked;
+        case "6":
+          return Room6.Door6Locked;
+        case "7B":
+          return Room7B.Door7BLocked;
         default:
           return true; 
       }
@@ -131,6 +162,15 @@ namespace Adventure.Models
           break;
         case "4":
           RoomFour.Door4Locked = false;
+          break;
+        case "5":
+          Room5.Door5Locked = false;
+          break;
+        case "6":
+          Room6.Door6Locked = false;
+          break;
+        case "7B":
+          Room7B.Door7BLocked = false;
           break;
         default:
           break;

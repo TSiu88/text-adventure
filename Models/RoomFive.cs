@@ -50,19 +50,20 @@ namespace Adventure.Models
     {
       switch(location)
       {
-        case "LOCATION":
+        case "LADDER":
           if (!Door5Locked)
           {
-            Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
+            Console.WriteLine("The rope LADDER you received from the STATUE is tied tightly to a support BEAM near the BALCONY and you climb it down onto a LEDGE below.");
             Game.CurrentRoom = "6";
           }
           else
           {
-            Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
+            Console.WriteLine("This BALCONY is high up and there's nothing to break your fall  Perhaps there is something that can help you reach the LEDGE below?");
           }
           break;
-        case "BACK":
-          Game.CurrentRoom = "3";
+        case "ELEVATOR":
+          Console.WriteLine("You push the down botton and make your back to the underground you started in.");
+          Game.CurrentRoom = "4";
           break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");

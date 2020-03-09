@@ -62,7 +62,7 @@ namespace Adventure.Models
           }
           break;
         case "BACK":
-          Game.CurrentRoom = "6";
+          Game.CurrentRoom = "5";
           break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");

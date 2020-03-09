@@ -50,8 +50,31 @@ namespace Adventure.Models
               case "HEAVY-KEY":
                 Console.WriteLine("You bang the JUNK against the KEY in hopes that it will open something.  It doesn't.");
                 break;
+              case "SPOON":
+                Console.WriteLine("You lift some JUNK in the SPOON and pretend to eat it.  Mmm JUNK food is delicious...not.");
+                break;
               default:
                 Console.WriteLine("You try to use the JUNK but it's still useless.");
+                break;
+            }
+            break;
+          case "SPOON":
+            switch(target)
+            {
+              case "JUNK":
+                Console.WriteLine("You lift some JUNK in the SPOON and pretend to eat it.  Mmm JUNK food is delicious...not.");
+                break;
+              case "MIRROR":
+                Console.WriteLine("You contemplate trying to break the MIRROR with your SPOON but it didn't seem like a good use of your time.");
+                break;
+              case "BUTTONS":
+                Console.WriteLine("You tap the SPOON on the BUTTONS.  It did not divine the correct answer of what to push.");
+                break;
+              case "TUNNEL":
+                Console.WriteLine("You use the SPOON to try to widen the mouth of the TUNNEL.  After taking 30 minutes to widen it by half an inch you decide this will take forever and stop.");
+                break;
+              default:
+                Console.WriteLine("If you were expecting to be SPOON-fed something, this is not the SPOON to use.");
                 break;
             }
             break;
@@ -92,7 +115,7 @@ namespace Adventure.Models
             }
             break;
           default:
-            Console.WriteLine("You try to use an item that you can't find.  It doesn't just exist.");
+            Console.WriteLine("You try to use an item that you can't find.  It just doesn't exist.");
             break;
         } // ITEM switch ends
       } // else ends

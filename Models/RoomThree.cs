@@ -53,7 +53,7 @@ namespace Adventure.Models
         case "ELEVATOR":
           if (!Door3Locked)
           {
-            Console.WriteLine("You press the up button and enter the ELEVATOR. Your ears are ringing. It feels like it's taking you a hundred floors up.");
+            Console.WriteLine("Here we go... You press the up button and enter the ELEVATOR. Your ears are ringing. It feels like it's taking you a hundred floors up.");
             Game.CurrentRoom = "5";
           }
           else
@@ -72,6 +72,15 @@ namespace Adventure.Models
             Console.WriteLine("You try to slide the WINDOW open but it's jammed.");
           }
           break;
+        case "CAT":
+          Console.WriteLine("You try to call the CAT. The CAT ignores you and continues to stare at something behind the WINDOW.");
+          break;
+        case "ROCK":
+          Console.WriteLine("You kick a small ROCK on the ground out of boredom. Nothing special happens.");
+          break;
+        case "BADGE-READER":
+          Console.WriteLine("The BADGE-READER is nailed down to the wall. Trying to budge it doesn't do anything.");
+          break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");
           break;
@@ -83,7 +92,28 @@ namespace Adventure.Models
       switch(item)
       {
         case "ROOM":
-          Console.WriteLine("There are ROCKs on the ground. The ELEVATOR doors are silvery, modern-looking with a BADGE-READER on the side. Meanwhile, the CAT is just standing there, purring and grooming itself. You notice it's wearing a COLLAR. It must have an owner. How did the CAT get lost here?");
+          Console.WriteLine("You see ROCKs on the ground. The ELEVATOR doors are silvery, modern-looking with a BADGE-READER on the side. Meanwhile, the CAT is just standing there, purring and grooming itself. You notice the CAT is wearing a COLLAR. It must have an owner. How did the CAT get lost here? Why the randomly placed WINDOW there?");
+          break;
+        case "CAT":
+          Console.WriteLine("You focus more on the CAT. It's wearing a COLLAR with something white and square-shaped attached to its COLLAR. Seems important.");
+          break;
+        case "ROCK":
+          Console.WriteLine("ROCKs are on the ground. They look normal.");
+          break;
+        case "COLLAR":
+          Console.WriteLine("You take a closer look at the CAT's COLLAR. Its COLLAR has a small white squared-shape ACCESS-CARD attached to it as the CAT moves around. You try to take the ACCESS-CARD but the CAT won't let you. Maybe you can try giving the CAT something it will like to have the CAT move closer to you...");
+          break;
+        case "ELEVATOR":
+          Console.WriteLine("The ELEVATOR just looks like a normal, modern-day looking ELEVATOR to you. Except this one has a BADGE-READER for special granted access only. Maybe there's something somewhere that can grant you access using the ELEVATOR?");
+          break;
+        case "BADGE READER":
+          Console.WriteLine("Just a BADGE READER that seems like it's connected to the ELEVATOR. Got to find something somewhere that can grant you access using the ELEVATOR...");
+          break;
+        case "WINDOW":
+          Console.WriteLine("You look through the WINDOW and see a can of SARDINES placed on a table inside that doorless ROOM. No wonder the CAT's been eyeing on it!");
+          break;
+        case "SARDINES":
+          Console.WriteLine("The can of SARDINES ");
           break;
         default:
           Console.WriteLine("You look at the air.  The air stares back...?");

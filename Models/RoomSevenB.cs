@@ -55,6 +55,7 @@ namespace Adventure.Models
           {
             Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
             Game.CurrentRoom = "2A";
+            // Gameover = true
           }
           else
           {
