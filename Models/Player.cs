@@ -84,6 +84,7 @@ namespace Adventure.Models
               case "WINDOW":
                 Console.WriteLine("You throw the ROCK at the WINDOW. It was a nice, clean shot! All the glass shattered and made space big enough for you to go through.");
                 RoomFour.Door4Locked = false;
+                Inventory.Remove("ROCK");
                 break;
               default:
                 Console.WriteLine("You throw the ROCK up in the air and catch it again. Seems like gravity works fine here.");
@@ -94,8 +95,9 @@ namespace Adventure.Models
             switch(target)
             {
               case "CAT":
-                Console.WriteLine("You open the can of SARDINES for the CAT. That got the CAT super excited. It's so happy that it wants to give you something back."); // cat returns something?
-                Game.UnlockDoor();
+                Console.WriteLine("You open the can of SARDINES for the CAT. That got the CAT super excited! It's so happy that it slides its body onto your leg and lets you pet it. You remember there is something important attached to its COLLAR. The CAT lets you take the ACCESS-CARD with you.");
+                Inventory.Remove("SARDINES");
+                Inventory.Add("ACCESS-CARD");
                 break;
               default:
                 Console.WriteLine("You fail to use the can of SARDINES.");
@@ -106,13 +108,13 @@ namespace Adventure.Models
             switch(target)
             {
               case "BADGE-READER":
-                Console.WriteLine("You tap your ACCESS-CARD onto the BADGE-READER. The elevator lights up and opens its doors for you.");
+                Console.WriteLine("You tap your ACCESS-CARD onto the BADGE-READER. The ELEVATOR lights up and opens its doors for you.");
                 Game.UnlockDoor();
                 break;
-              default:
+              default: 
                 Console.WriteLine("You tap your ACCESS-CARD randomly onto the walls. Nothing happens.");
                 break;
-            }
+            } 
             break;
           default:
             Console.WriteLine("You try to use an item that you can't find.  It just doesn't exist.");

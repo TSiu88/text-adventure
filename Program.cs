@@ -24,6 +24,7 @@ namespace Adventure
 
       while(!gameOver)
       {
+        gameOver = CheckGameOver();
         Game.ShowStats();
         game.RoomDescription();
         game.CallRoomCommands(AskCommands());
@@ -36,6 +37,15 @@ namespace Adventure
       string commandString = Console.ReadLine().ToUpper();
       string[] commands = commandString.Split(" ");
       return commands;
+    }
+
+    public static bool CheckGameOver()
+    {
+      if(!game.CheckDoorLocked("7B"))
+      {
+        return true;
+      }
+      return false;
     }
   }
 }

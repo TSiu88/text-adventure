@@ -1,4 +1,8 @@
 # Notes
+![LastCommit](https://img.shields.io/github/last-commit/tsiu88/text-adventure)
+![Languages](https://img.shields.io/github/languages/top/tsiu88/text-adventure)
+[![MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://lbesson.mit-license.org/)
+
 
 #### Genre: Adventure, Escape, Dungeon
 

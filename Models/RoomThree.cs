@@ -101,7 +101,7 @@ namespace Adventure.Models
           Console.WriteLine("ROCKs are on the ground. They look normal.");
           break;
         case "COLLAR":
-          Console.WriteLine("You take a closer look at the CAT's COLLAR. Its COLLAR has a small white squared-shape ACCESS-CARD attached to it as the CAT moves around. You try to take the ACCESS-CARD but the CAT won't let you. Maybe you can try giving the CAT something it will like to have the CAT move closer to you...");
+          Console.WriteLine("You take a closer look at the CAT's COLLAR. Its COLLAR has a small white squared-shape ACCESS-CARD attached to it as the CAT moves around. You try to take the ACCESS-CARD but the CAT won't let you. Maybe you can try giving the CAT something it likes to get the CAT move closer to you...");
           break;
         case "ELEVATOR":
           Console.WriteLine("The ELEVATOR just looks like a normal, modern-day looking ELEVATOR to you. Except this one has a BADGE-READER for special granted access only. Maybe there's something somewhere that can grant you access using the ELEVATOR?");
@@ -113,7 +113,7 @@ namespace Adventure.Models
           Console.WriteLine("You look through the WINDOW and see a can of SARDINES placed on a table inside that doorless ROOM. No wonder the CAT's been eyeing on it!");
           break;
         case "SARDINES":
-          Console.WriteLine("The can of SARDINES ");
+          Console.WriteLine("The CAT will for sure love the can of SARDINES. Now, how do I get to the other side of the WINDOW?");
           break;
         default:
           Console.WriteLine("You look at the air.  The air stares back...?");
@@ -129,10 +129,22 @@ namespace Adventure.Models
           Console.WriteLine("You pick up a medium-sized ROCK.");
           Player.Inventory.Add("ROCK");
           break;
+        case "ACCESS-CARD":
+          Console.WriteLine("The CAT won't even move closer to you. How could you pick up the ACCESS-CARD attached to its COLLAR, you wonder?");
+          break;
+        case "SARDINES":
+          Console.WriteLine("The can of SARDINES is on the other side of the WINDOW. Got to find something to break the WINDOW with...");
+          break;
+        case "COLLAR":
+          Console.WriteLine("The CAT won't even move closer to you. How could you pick up its COLLAR, you wonder?");
+          break;
+        case "CAT":
+          Console.WriteLine("The CAT won't even move closer to you. It seems shy around strangers. The CAT won't even let you pet it. Somehow you think you've got to make friends with this CAT. But how?");
+          break;
         default:
           Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
-      }
+      } 
     }
     private void RoomThreeTalkCase(string person)
     {
@@ -140,15 +152,15 @@ namespace Adventure.Models
       {
         case "CAT":
           Console.WriteLine("'Meow...' says the CAT. ");
-          Console.WriteLine("How will you reply? (PET/BYE)");
+          Console.WriteLine("How will you reply? (HELLO/BYE)");
           string reply = Console.ReadLine().ToUpper();
           switch(reply)
           {
-            case "PET":
-              Console.WriteLine("*purr* *purr* It seems that the CAT likes you. As you pet the CAT, you take a closer look at what its gaze is fixated on. There is a can of SARDINES lying behind the clear glass WINDOW. Looks like the CAT wants you to get it.'");
+            case "HELLO":
+              Console.WriteLine("You say HELLO to the CAT. The CAT won't even move closer to you. It seems shy around strangers. The CAT won't even let you pet it. You notice the CAT's gaze is fixed onto the can of SARDINES behind the WINDOW. It almost seems like the CAT wants you to get the SARDINES for it.");
               break;
             case "BYE":
-              Console.WriteLine("The CAT goes back minding its own business.");
+              Console.WriteLine("'Meow...' the CAT goes back to minding its own business.");
               break;
             default:
               Console.WriteLine("'Meow?' The CAT looks confused.");

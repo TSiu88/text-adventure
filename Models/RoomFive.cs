@@ -62,7 +62,7 @@ namespace Adventure.Models
           }
           break;
         case "ELEVATOR":
-          Console.WriteLine("You push the down botton and make your back to the underground you started in.");
+          Console.WriteLine("You push the down botton on the ELEVATOR and make your back to the underground rooms you started in.");
           Game.CurrentRoom = "4";
           break;
         default:
@@ -75,7 +75,8 @@ namespace Adventure.Models
     {
       switch(item)
       {
-        case "ITEM":
+        case "ROOM":
+          Console.WriteLine("");
           break;
         default:
           break;

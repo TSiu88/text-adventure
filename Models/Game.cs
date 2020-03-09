@@ -70,16 +70,16 @@ namespace Adventure.Models
           Console.WriteLine("This is a very small ROOM, almost like storage space without any doors. Hmm, weird. There's a can of SARDINES that you saw earlier.");
           break;
         case "5":
-          Console.WriteLine("Room5");
-          break;
+          Console.WriteLine("The ELEVATOR opens to a bright airy bedroom with a large BALCONY.  The breeze from the open doors feel nice but it is very high up.  Looking down you discover this ROOM is at the top of a tower on a steep cliff."); 
+          break; 
         case "6":
-          Console.WriteLine("Room6");
+          Console.WriteLine("The LEDGE you managed to reach with the rope LADDER has a steep cliff on one side and a sharp drop on the other.  There is however a TRAPDOOR set in the ground not far from where you touched down.");
           break;
         case "7A":
-          Console.WriteLine("Room7A");
+          Console.WriteLine("This section of the CAVE is dark and damp.  There are small PUDDLES of salt water and STALAGMITES everywhere.  From the light you can see from the open TRAPDOOR, you can make out a narrow set of STAIRS leading downward.");
           break;
         case "7B":
-          Console.WriteLine("Room7B");
+          Console.WriteLine("From the narrow STAIRS, the ROOM opens up to a larger CAVERN, a hidden DOCK connected to the OCEAN.  A well maintained BOAT is tied to the DOCK.  This may be your way out!");
           break;
         default:
           Console.WriteLine("Room number not found!");
@@ -124,9 +124,9 @@ namespace Adventure.Models
     }
     
     // Return true if door is locked
-    public bool CheckDoorLocked()
+    public bool CheckDoorLocked(string room)
     {
-      switch(CurrentRoom)
+      switch(room)
       {
         case "1":
           return Room1.Door1Locked;

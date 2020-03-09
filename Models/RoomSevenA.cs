@@ -50,19 +50,12 @@ namespace Adventure.Models
     {
       switch(location)
       {
-        case "LOCATION":
-          if (!Door7ALocked)
-          {
-            Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
-            Game.CurrentRoom = "7B";
-          }
-          else
-          {
-            Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
-          }
+        case "STAIRS":
+          Console.WriteLine("You walk down the damp STAIRS, following the sound of running water.");
           break;
-        case "BACK":
-        Game.CurrentRoom = "6";
+        case "LEDGE":
+          Console.WriteLine("You climb back through the hole of the TRAPDOOR onto the LEDGE outside.");
+          Game.CurrentRoom = "6";
           break;
         default:
           Console.WriteLine("You try to move but you can't figure out how.");

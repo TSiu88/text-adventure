@@ -41,7 +41,6 @@ namespace Adventure.Models
           default:
             Console.WriteLine("Invalid command.  Please try again.");
             break;
-            
         } // Command[0] switch ends
       } // Room SevenB ends
       Console.WriteLine("****************************");
@@ -52,7 +51,7 @@ namespace Adventure.Models
       switch(location)
       {
         case "WINDOW":
-          Console.WriteLine("You go through the broken WINDOW.");
+          Console.WriteLine("You go through the broken WINDOW and back into the ROOM with the ELEVATOR entrance.");
           Game.CurrentRoom = "3";
           break;
         default:
@@ -66,38 +65,34 @@ namespace Adventure.Models
       switch(item)
       {
         case "ROOM":
-          Console.WriteLine("You look around the room and see an ACCESS-CARD hanging on the wall behind you.");
+          Console.WriteLine("You look around the doorless ROOM and there's just an old rustic table with a can of SARDINES placed on it. What an odd space this is.");
           break;
         default:
           Console.WriteLine("You look at the air.  The air stares back...?");
           break;
       }
     } // RoomFourLookCase ends
-
+ 
     private void RoomFourPickupCase(string item)
     {
       switch(item)
       {
         case "SARDINES":
-          Console.WriteLine("You pick up a can of SARDINES");
+          Console.WriteLine("You pick up a can of SARDINES.");
           Player.Inventory.Add("SARDINES");
-          break;
-        case "ACCESS-CARD":
-          Console.WriteLine("You take the ACCESS-CARD. It is plain white which reminds you of your school's security access card that you can tap on any BADGE-READER in your school building.");
-          Player.Inventory.Add("ACCESS-CARD");
           break;
         default:
           Console.WriteLine("You try to pick up the air.  It wasn't interested.");
           break;
-      }
-    }
+      } 
+    } 
     private void RoomFourTalkCase(string person)
     {
       switch(person)
       {
         case "CAT":
           Console.WriteLine("'MEOWWWWWWWWW'");
-          Console.WriteLine("Sounds like it's very excited. The CAT is standing next the WINDOW.");
+          Console.WriteLine("Sounds like it's very excited. The CAT is waiting for you by the WINDOW.");
           break;
         default:
           Console.WriteLine("You talk to yourself.  You wonder what you're doing.");

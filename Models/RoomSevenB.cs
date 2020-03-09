@@ -50,17 +50,20 @@ namespace Adventure.Models
     {
       switch(location)
       {
-        case "LOCATION":
+        case "BOAT":
           if (!Door7BLocked)
           {
-            Console.WriteLine("The unlocked DOOR opens easily and you walk through.");
-            Game.CurrentRoom = "2A";
+            Console.WriteLine("The BOAT starts with a loud roar.  Time to escape!");
+            Game.CurrentRoom = "8";
             // Gameover = true
           }
           else
           {
-            Console.WriteLine("This DOOR is locked up tight.  I can't open it without a KEY.");
+            Console.WriteLine("The BOAT has some kind of PASSWORD lock on it.  It won't start without it.");
           }
+          break;
+        case "STAIRS":
+          Console.WriteLine("You walk up the STAIRS back to the entrance of the CAVE.");
           break;
         default:
           Console.WriteLine("You try to move it but you can't figure out how.");
