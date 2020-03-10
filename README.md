@@ -16,9 +16,10 @@
     - [Instructions](#instructions)
     - [Other Technologies Used](#other-technologies-used)
 3. [Notable Features](#notable-features)
-4. [Known Bugs](#known-bugs)
-5. [Support and Contact Details](#support-and-contact-details)
-6. [License](#license)
+4. [Screenshots](#screenshots)
+5. [Known Bugs](#known-bugs)
+6. [Support and Contact Details](#support-and-contact-details)
+7. [License](#license)
 ---
 ## Description
 
@@ -37,7 +38,7 @@ This program is currently unfinished and under construction.
 *This page may be viewed by:*
 
 1. Download and install .NET Core from the [official website](https://dotnet.microsoft.com/download/dotnet-core/)
-2. Clone the [repository](https://github.com/TSiu88/text-adventure.git) from my [GitHub page](https://github.com/TSiu88)
+2. Clone the [repository](https://github.com/TSiu88/text-adventure.git) from this [GitHub page](https://github.com/TSiu88)
 3. Use a command line interface to move to the repository's directory with `cd project-directory`
 4. Run `dotnet restore` and `dotnet build` to get the packages to run this program
 5. Run `dotnet run` to start up the program in the command line interface 
@@ -49,16 +50,13 @@ This program is currently unfinished and under construction.
 ## Notable Features
 This project is a text-based adventure game where you can LOOK, PICKUP, USE, MOVE, and TALK to different objects to solve the puzzles and escape.
 
-<!-- ## Screenshots
+## Screenshots
 
-_Here are some snippets for examples of what it looks like:_
+_Here are some snippets for examples of what this program looks like:_
 
-![Snippet of example 1 with full word examples](WordCounter/img/snippet3.png)
+![Snippet of example 1 with intro text](/img/snippet1.png)
 
-![Snippet of example 2 with invalid search word](WordCounter/img/snippet1.png)
-
-![Snippet of example 3 with empty entries](WordCounter/img/snippet2.png) -->
-
+![Snippet of example 2 with tutorial monkey](/img/snippet2.png)
 
 ## Known Bugs
 
@@ -66,7 +64,7 @@ _This program is still under construction and does not reach the end game._
 
 ## Support and Contact Details
 
-_If there are any question or concerns please contact me at our emails [Tiffany Siu](mailto:tsiu88@gmail.com) or [Adela Darmansyah](mailto:adela.yohana@gmail.com). Thank you._
+_If there are any question or concerns please contact us at our emails: [Tiffany Siu](mailto:tsiu88@gmail.com) or [Adela Darmansyah](mailto:adela.yohana@gmail.com). Thank you._
 
 ### License
 
