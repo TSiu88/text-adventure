@@ -79,7 +79,7 @@ namespace Adventure.Models
           Console.WriteLine("This section of the CAVE is dark and damp.  There are small PUDDLES of salt water and STALAGMITES everywhere.  From the light you can see from the open TRAPDOOR, you can make out a narrow set of STAIRS leading downward.");
           break;
         case "7B":
-          Console.WriteLine("From the narrow STAIRS, the ROOM opens up to a larger CAVERN, a hidden DOCK connected to the OCEAN.  A well maintained BOAT is tied to the DOCK.  This may be your way out!");
+          Console.WriteLine("From the narrow STAIRS, the ROOM opens up to a larger CAVERN with a well maintained BOAT tied to the hidden DOCK.  The OCEAN is just visible from a distant opening on the far side of the CAVERN.  This may be your way out!");
           break;
         default:
           Console.WriteLine("Room number not found!");

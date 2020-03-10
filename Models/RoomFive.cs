@@ -53,7 +53,7 @@ namespace Adventure.Models
         case "LADDER":
           if (!Door5Locked)
           {
-            Console.WriteLine("The rope LADDER you received from the STATUE is tied tightly to a support BEAM near the BALCONY and you climb it down onto a LEDGE below.");
+            Console.WriteLine("The rope LADDER you received from the STATUE is tied tightly to a support beam near the BALCONY and you climb it down onto a LEDGE below.");
             Game.CurrentRoom = "6";
           }
           else
@@ -76,7 +76,7 @@ namespace Adventure.Models
       switch(item)
       {
         case "ROOM":
-          Console.WriteLine("");
+          Console.WriteLine("A large BED dominates the room.  It looks very comfy with fluffy PILLOWS and a CANOPY.  Looking over the BALCONY railing, you see a small LEDGE with something square on it far below you.");
           break;
         default:
           break;
